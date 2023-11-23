@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/src/pages/buttons_pages.dart';
 import 'package:my_app/src/pages/sing_in.dart';
 
 import 'package:my_app/src/pages/sing_up.dart';
@@ -31,8 +32,7 @@ class _HomePagesState extends State<HomePages> {
             children: <Widget>[
               //Aqui le ubicaremos el url de una imagen.
               const IconContainer(
-                  url:
-                      "images/vita-marija-murenaite-5Q_Edarv5zQ-unsplash.jpg"),
+                  url: "images/vita-marija-murenaite-5Q_Edarv5zQ-unsplash.jpg"),
               const Text(
                 "Bienvenidos a mi curso",
                 style: TextStyle(
@@ -86,6 +86,27 @@ class _HomePagesState extends State<HomePages> {
                         color: Colors.orange,
                         fontFamily: "FredokaOne",
                         fontSize: 30.0),
+                  ),
+                ),
+              ),
+              const Divider(
+                height: 30.0,
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: 20.0,
+                child: ElevatedButton(
+                  onPressed: () {
+                    final route = MaterialPageRoute(
+                        builder: (context) => const ButtonsPages());
+                    Navigator.push(context, route);
+                  },
+                  child: const Text(
+                    "Button",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 12, 12, 11),
+                        fontFamily: "FredokaOne",
+                        fontSize: 20.0),
                   ),
                 ),
               )

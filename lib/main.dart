@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:my_app/src/pages/buttons_pages.dart';
 import 'package:my_app/src/pages/home_pages.dart';
 import 'package:my_app/src/pages/sing_in.dart';
 import 'package:my_app/src/pages/sing_up.dart';
@@ -29,6 +29,9 @@ class MyApp extends StatelessWidget {
         "Home": (BuildContext context) => const HomePages(),
         "Sing_in": (BuildContext context) => const SingIn(),
         "Sing_up": (BuildContext context) => const SingUp(),
+        //"Buttons":(BuildContext context) => const ButtonsPages(),
+        
+
       },
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/src/pages/menu_lateral.dart';
 import 'package:my_app/src/widgets/input_text.dart';
 
 class LoginForm extends StatefulWidget {
@@ -20,20 +21,21 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         children: <Widget>[
           InputText(
-              label: "Email Address",
-              hint: "Email",
-              keyboard: TextInputType.emailAddress,
-              icon: const Icon(Icons.verified_user),
-              onChanged: (data) {
-                _email = data!;
-              },
-              validator: (data) {
-                if (data!.contains("@")) {
-                  return "Invalid email";
-                }
-                // ignore: null_check_always_fails
-                return null!;
-              },),
+            label: "Email Address",
+            hint: "Email",
+            keyboard: TextInputType.emailAddress,
+            icon: const Icon(Icons.verified_user),
+            onChanged: (data) {
+              _email = data!;
+            },
+            validator: (data) {
+              if (data!.contains("@")) {
+                return "Invalid email";
+              }
+              // ignore: null_check_always_fails
+              return null!;
+            },
+          ),
           const Divider(
             height: 30.0,
           ),
@@ -42,7 +44,7 @@ class _LoginFormState extends State<LoginForm> {
               hint: "Password",
               obsecure: false,
               //keyboard: TextInputType.emailAddress,
-             icon: const Icon(Icons.lock_clock),
+              icon: const Icon(Icons.lock_clock),
               onChanged: (data) {
                 _password = data!;
               },
@@ -61,16 +63,19 @@ class _LoginFormState extends State<LoginForm> {
             width: double.infinity,
             height: 60.0,
             child: ElevatedButton(
-              onPressed: () {},
-              child: const Text(
-                "Ingresar",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: "FreedokaOne",
-                  fontSize: 30.0,
-                ),
-              )
-            ), 
+                onPressed: () {
+                  final route =
+                      MaterialPageRoute(builder: (context) => MenuLateral());
+                  Navigator.push(context, route);
+                },
+                child: const Text(
+                  "Ingresar",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "FreedokaOne",
+                    fontSize: 30.0,
+                  ),
+                )),
           ),
         ],
       ),

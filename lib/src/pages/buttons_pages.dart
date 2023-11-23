@@ -1,16 +1,16 @@
-import 'package:flutter/material.dart';
+import 'package:my_app/src/widgets/button.dart';
 import 'package:my_app/src/widgets/icon-containers.dart';
-// ignore: unused_import
-import 'package:my_app/src/widgets/login_form.dart';
+import 'package:flutter/material.dart';
+//import 'package:my_app/src/widgets/login_form.dart';
 
-class SingIn extends StatefulWidget {
-  const SingIn({super.key});
+class ButtonsPages extends StatefulWidget {
+  const ButtonsPages({super.key});
 
   @override
-  State<SingIn> createState() => _SingInState();
+  State<ButtonsPages> createState() => _ButtonsPagesState();
 }
 
-class _SingInState extends State<SingIn> {
+class _ButtonsPagesState extends State<ButtonsPages> {
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
@@ -34,7 +34,7 @@ class _SingInState extends State<SingIn> {
                   url: "images/vita-marija-murenaite-5Q_Edarv5zQ-unsplash.jpg"),
               Center(
                   child: Text(
-                "Login",
+                "",
                 style: TextStyle(
                   fontFamily: "PermanentMarKer",
                   fontSize: 40.0,
@@ -46,7 +46,7 @@ class _SingInState extends State<SingIn> {
 
               Center(
                   child: Text(
-                "Pantalla Nº2",
+                "Pantalla Nº4",
                 style: TextStyle(
                   fontFamily: "PermanentMarKer",
                   fontSize: 30.0,
@@ -56,7 +56,9 @@ class _SingInState extends State<SingIn> {
               Divider(
                 height: 30.0,
               ),
-              LoginForm()
+              
+
+              Button()
             ],
           ),
         ),
